@@ -7,16 +7,18 @@ document.addEventListener("DOMContentLoaded", () => {
   function addTask() {
     const taskText = taskInput.value.trim();
 
-  if (taskText === "") {
-            alert("Please enter a task.");
-            return;
-        }
-
+    if (taskText === "") {
+      alert("Please enter a task.");
+      return;
+    }
 
     // Task Creation and Removal
 
     const listItem = document.createElement("li");
     listItem.textContent = taskText;
+    listItem.addEventListener("click", () => {
+      listItem.classList.add("done");
+    });
 
     const removeButton = document.createElement("button");
     removeButton.textContent = "Remove";
