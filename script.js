@@ -7,10 +7,11 @@ document.addEventListener("DOMContentLoaded", () => {
   function addTask() {
     const taskText = taskInput.value.trim();
 
-    if (taskText === "") {
-      console.log("Please enter a task.");
-      return;
-    }
+  if (taskText === "") {
+            alert("Please enter a task.");
+            return;
+        }
+
 
     // Task Creation and Removal
 
